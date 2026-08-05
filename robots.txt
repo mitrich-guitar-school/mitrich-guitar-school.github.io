@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mitrich-guitar-school.github.io/sitemap.xml

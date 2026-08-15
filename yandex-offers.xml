@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yml_catalog date="2026-08-15 12:00">
+  <shop>
+    <name>Mitrich Guitar School</name>
+    <company>Mitrich Guitar School</company>
+    <url>https://mitrich-guitar-school.github.io/</url>
+    <email>mitrich.guitar.school@yandex.ru</email>
+    <picture>https://mitrich-guitar-school.github.io/favicon-180.png</picture>
+    <description>Mitrich Guitar School — школа игры на гитаре, электрогитаре и укулеле в Батуми. Индивидуальные занятия очно в студии на ул. Хасана Хелимиши, 36 и онлайн по видеосвязи для учеников из любой точки мира. Обучение с нуля и для продолжающих, для взрослых и детей.</description>
+    <currencies>
+      <currency id="USD" rate="1"/>
+    </currencies>
+    <offers>
+
+      <offer id="1" available="true">
+        <name>Бесплатное пробное занятие по гитаре онлайн</name>
+        <url>https://mitrich-guitar-school.github.io/#pricing</url>
+        <price>0</price>
+        <currencyId>USD</currencyId>
+        <categoryId>603</categoryId>
+        <picture>https://mitrich-guitar-school.github.io/og-image.jpg</picture>
+        <description>Бесплатное вводное занятие по гитаре, электрогитаре или укулеле с преподавателем Mitrich Guitar School. Проходит по видеосвязи в Zoom, длится 30 минут. На занятии мы знакомимся, определяем ваш текущий уровень и цель обучения, показываем первые упражнения на инструменте и вместе составляем план дальнейших занятий. Подходит как для полных новичков, так и для тех, кто уже играл раньше и хочет продолжить. Занятия также можно проходить очно в студии в Батуми по той же программе.</description>
+        <param name="Продолжительность" unit="минуты">30</param>
+        <param name="План" order="1" unit="Этап 1">Знакомство, определение уровня и цели обучения</param>
+        <param name="План" order="2" unit="Этап 2">Постановка рук и первое упражнение на инструменте</param>
+        <param name="План" order="3" unit="Этап 3">Составление плана дальнейших занятий</param>
+        <param name="Формат обучения">С преподавателем</param>
+        <param name="Формат">Онлайн</param>
+        <param name="Сложность">Для новичков</param>
+        <param name="Тип обучения">Курс</param>
+        <param name="Есть бесплатная часть">true</param>
+      </offer>
+
+      <offer id="2" available="true">
+        <name>Разовое занятие по гитаре онлайн</name>
+        <url>https://mitrich-guitar-school.github.io/#pricing</url>
+        <price>17</price>
+        <currencyId>USD</currencyId>
+        <categoryId>603</categoryId>
+        <picture>https://mitrich-guitar-school.github.io/og-image.jpg</picture>
+        <description>Одно индивидуальное занятие по гитаре, электрогитаре или укулеле с преподавателем Mitrich Guitar School, без абонемента. Проходит по видеосвязи в Zoom, длится 45-60 минут. Занятие включает разминку и повторение пройденного, разбор новой техники или аккордов и практику на конкретной песне. Подходит, если вы хотите заниматься гибко, без регулярных обязательств. Занятия также можно проходить очно в студии в Батуми по той же программе.</description>
+        <param name="Продолжительность" unit="минуты">60</param>
+        <param name="План" order="1" unit="Этап 1">Разминка и повторение пройденного материала</param>
+        <param name="План" order="2" unit="Этап 2">Разбор новой техники, аккордов или приёма игры</param>
+        <param name="План" order="3" unit="Этап 3">Практика на выбранной песне</param>
+        <param name="Формат обучения">С преподавателем</param>
+        <param name="Формат">Онлайн</param>
+        <param name="Сложность">Для новичков</param>
+        <param name="Тип обучения">Курс</param>
+      </offer>
+
+      <offer id="3" available="true">
+        <name>Абонемент на 4 занятия по гитаре онлайн</name>
+        <url>https://mitrich-guitar-school.github.io/#pricing</url>
+        <price>65</price>
+        <currencyId>USD</currencyId>
+        <categoryId>603</categoryId>
+        <picture>https://mitrich-guitar-school.github.io/og-image.jpg</picture>
+        <description>Абонемент на 4 индивидуальных занятия по гитаре, электрогитаре или укулеле, одно занятие в неделю в течение месяца. Проходит по видеосвязи в Zoom с преподавателем Mitrich Guitar School. За месяц ученик проходит путь от постановки рук и первых аккордов до уверенной игры первой полностью сыгранной песни. Каждое занятие записывается, запись можно пересматривать между уроками. Занятия также можно проходить очно в студии в Батуми по той же программе.</description>
+        <param name="Продолжительность" unit="месяц">1</param>
+        <param name="План" order="1" unit="Неделя 1">Постановка рук и разбор первых аккордов</param>
+        <param name="План" order="2" unit="Неделя 2">Смена аккордов и простой бой или перебор</param>
+        <param name="План" order="3" unit="Неделя 3">Разбор и разучивание первой песни</param>
+        <param name="План" order="4" unit="Неделя 4">Закрепление материала и разбор новой песни</param>
+        <param name="Формат обучения">С преподавателем</param>
+        <param name="Формат">Онлайн</param>
+        <param name="Сложность">Для новичков</param>
+        <param name="Тип обучения">Курс</param>
+        <param name="Часы в неделю">1</param>
+      </offer>
+
+      <offer id="4" available="true">
+        <name>Абонемент на 8 занятий по гитаре онлайн</name>
+        <url>https://mitrich-guitar-school.github.io/#pricing</url>
+        <price>125</price>
+        <currencyId>USD</currencyId>
+        <categoryId>603</categoryId>
+        <picture>https://mitrich-guitar-school.github.io/og-image.jpg</picture>
+        <description>Абонемент на 8 индивидуальных занятий по гитаре, электрогитаре или укулеле, два занятия в неделю в течение месяца. Проходит по видеосвязи в Zoom с преподавателем Mitrich Guitar School. Более частые занятия дают быстрый прогресс: за месяц ученик осваивает базовую технику, разбирает несколько песен и переходит к более свободной игре и импровизации. Каждое занятие записывается, запись можно пересматривать между уроками. Занятия также можно проходить очно в студии в Батуми по той же программе.</description>
+        <param name="Продолжительность" unit="месяц">1</param>
+        <param name="План" order="1" unit="Этап 1">Основы: постановка рук, первые аккорды и бой</param>
+        <param name="План" order="2" unit="Этап 2">Техника и ритм, чистая смена аккордов</param>
+        <param name="План" order="3" unit="Этап 3">Разбор двух полноценных песен</param>
+        <param name="План" order="4" unit="Этап 4">Свободная игра, импровизация и подбор на слух</param>
+        <param name="Формат обучения">С преподавателем</param>
+        <param name="Формат">Онлайн</param>
+        <param name="Сложность">Для новичков</param>
+        <param name="Тип обучения">Курс</param>
+        <param name="Часы в неделю">2</param>
+      </offer>
+
+    </offers>
+  </shop>
+</yml_catalog>

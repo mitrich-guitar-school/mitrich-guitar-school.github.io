@@ -198,6 +198,7 @@
   .price-card h3{font-size:20px; margin-bottom:4px;}
   .price-amount{font-family:'Fraunces', serif; font-size:40px; font-weight:600; margin:14px 0 4px;}
   .price-amount span{font-size:16px; font-weight:400; opacity:0.7;}
+  .price-amount .price-value{font-size:40px; font-weight:600; opacity:1; font-family:'Fraunces', serif;}
   .price-note{font-size:13.5px; color:rgba(24,24,24,0.6); margin-bottom:20px;}
   .price-card.featured .price-note{color:rgba(255,249,245,0.7);}
   .price-list{list-style:none; padding:0; margin:0 0 24px; flex-grow:1;}
@@ -365,15 +366,15 @@
       <span>MITRICH<small>GUITAR SCHOOL</small></span>
     </div>
     <div class="nav-links">
-      <a href="#offline">Офлайн</a>
-      <a href="#online">Онлайн</a>
-      <a href="#pricing">Цены</a>
-      <a href="#teacher">Преподаватель</a>
-      <a href="#faq">FAQ</a>
-      <a href="#contacts">Контакты</a>
+      <a href="#offline" data-i18n="nav_offline">Офлайн</a>
+      <a href="#online" data-i18n="nav_online">Онлайн</a>
+      <a href="#pricing" data-i18n="nav_pricing">Цены</a>
+      <a href="#teacher" data-i18n="nav_teacher">Преподаватель</a>
+      <a href="#faq" data-i18n="nav_faq">FAQ</a>
+      <a href="#contacts" data-i18n="nav_contacts">Контакты</a>
     </div>
     <div class="nav-right">
-      <a class="nav-cta" href="https://wa.me/995591413065" target="_blank">Записаться</a>
+      <a class="nav-cta" href="https://wa.me/995591413065" target="_blank" data-i18n="hero_cta_primary">Записаться</a>
       <button id="lang-toggle">EN</button>
     </div>
   </div>
@@ -382,7 +383,7 @@
 <section class="hero">
   <div class="wrap hero-grid">
     <div class="hero-copy">
-      <div class="eyebrow"><span class="dot"></span>📍 БАТУМИ · ИНДИВИДУАЛЬНЫЕ УРОКИ</div>
+      <div class="eyebrow"><span class="dot"></span><span data-i18n="hero_eyebrow">📍 БАТУМИ · ИНДИВИДУАЛЬНЫЕ УРОКИ</span></div>
       <h1 data-i18n="hero_h1">Индивидуальные уроки гитары<br>в Батуми и онлайн</h1>
       <ul class="check-list" data-i18n-list="hero_checklist">
         <li data-i18n="check1">с нуля</li>
@@ -472,7 +473,7 @@
     <div class="location-card">
       <div class="location-info">
         <div class="mono" style="font-size:13px; color:var(--orange);" data-i18n="location_city">БАТУМИ, ГРУЗИЯ</div>
-        <div class="addr">ул. Хасана Хелимиши, 36</div>
+        <div class="addr" data-i18n="location_addr">ул. Хасана Хелимиши, 36</div>
         <div class="addr-sub" data-i18n="location_note">Студия внутри города, удобный подъезд и парковка рядом. Точный подъезд подскажем при записи.</div>
         <a class="btn btn-primary" href="https://maps.app.goo.gl/PHgQ1nYUVwJpVdwTA" target="_blank" data-i18n="location_cta">Проложить маршрут</a>
       </div>
@@ -647,6 +648,7 @@
       <a class="btn btn-primary" href="https://wa.me/995591413065" target="_blank">WhatsApp</a>
       <a class="btn btn-ghost" href="https://t.me/guitar_school_batumi" target="_blank">Telegram</a>
       <a class="btn btn-ghost" href="https://www.instagram.com/mitrich.guitar/" target="_blank">Instagram</a>
+      <a class="btn btn-ghost" href="tel:+995591413065">+995 591 413 065</a>
     </div>
   </div>
 </section>
@@ -744,6 +746,14 @@
     faq5_a: {en: "Yes, in either format: we start with hand positioning and first chords, regardless of experience."},
     faq6_q: {en: "What payment methods do you accept?"},
     faq6_a: {en: "I accept payment in different currencies and through several methods: bank transfer (Visa, Mastercard, Mir), PayPal, USDT (cryptocurrency), and cash for in-person lessons in Batumi. We'll confirm the most convenient option when you book."},
+    nav_offline: {en: "In-person"},
+    nav_online: {en: "Online"},
+    nav_pricing: {en: "Pricing"},
+    nav_teacher: {en: "Teacher"},
+    nav_faq: {en: "FAQ"},
+    nav_contacts: {en: "Contacts"},
+    hero_eyebrow: {en: "📍 BATUMI · INDIVIDUAL LESSONS"},
+    location_addr: {en: "36 Khasan Khelimishi street"},
     footer_h2: {en: "First lesson is free.<br>In person or online, it's up to you."},
     footer_p: {en: "Message us on WhatsApp or Telegram to choose a format and a convenient time. We'll reply within the day."}
   };

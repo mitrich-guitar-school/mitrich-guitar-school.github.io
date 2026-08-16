@@ -24,11 +24,11 @@
         <param name="План" order="1" unit="Этап 1">Знакомство, определение уровня и цели обучения</param>
         <param name="План" order="2" unit="Этап 2">Постановка рук и первое упражнение на инструменте</param>
         <param name="План" order="3" unit="Этап 3">Составление плана дальнейших занятий</param>
-        <param name="Формат обучения">С преподавателем</param>
-        <param name="Формат">Онлайн</param>
-        <param name="Сложность">Для новичков</param>
-        <param name="Тип обучения">Курс</param>
-        <param name="Есть бесплатная часть">true</param>
+        <param name="Формат обучения" unit="формат">С преподавателем</param>
+        <param name="Формат" unit="формат занятий">Онлайн</param>
+        <param name="Сложность" unit="уровень">Для новичков</param>
+        <param name="Тип обучения" unit="тип">Курс</param>
+        <param name="Есть бесплатная часть" unit="наличие">true</param>
       </offer>
 
       <offer id="2" available="true">
@@ -43,10 +43,10 @@
         <param name="План" order="1" unit="Этап 1">Разминка и повторение пройденного материала</param>
         <param name="План" order="2" unit="Этап 2">Разбор новой техники, аккордов или приёма игры</param>
         <param name="План" order="3" unit="Этап 3">Практика на выбранной песне</param>
-        <param name="Формат обучения">С преподавателем</param>
-        <param name="Формат">Онлайн</param>
-        <param name="Сложность">Для новичков</param>
-        <param name="Тип обучения">Курс</param>
+        <param name="Формат обучения" unit="формат">С преподавателем</param>
+        <param name="Формат" unit="формат занятий">Онлайн</param>
+        <param name="Сложность" unit="уровень">Для новичков</param>
+        <param name="Тип обучения" unit="тип">Курс</param>
       </offer>
 
       <offer id="3" available="true">
@@ -62,11 +62,11 @@
         <param name="План" order="2" unit="Неделя 2">Смена аккордов и простой бой или перебор</param>
         <param name="План" order="3" unit="Неделя 3">Разбор и разучивание первой песни</param>
         <param name="План" order="4" unit="Неделя 4">Закрепление материала и разбор новой песни</param>
-        <param name="Формат обучения">С преподавателем</param>
-        <param name="Формат">Онлайн</param>
-        <param name="Сложность">Для новичков</param>
-        <param name="Тип обучения">Курс</param>
-        <param name="Часы в неделю">1</param>
+        <param name="Формат обучения" unit="формат">С преподавателем</param>
+        <param name="Формат" unit="формат занятий">Онлайн</param>
+        <param name="Сложность" unit="уровень">Для новичков</param>
+        <param name="Тип обучения" unit="тип">Курс</param>
+        <param name="Часы в неделю" unit="час">1</param>
       </offer>
 
       <offer id="4" available="true">
@@ -82,11 +82,11 @@
         <param name="План" order="2" unit="Этап 2">Техника и ритм, чистая смена аккордов</param>
         <param name="План" order="3" unit="Этап 3">Разбор двух полноценных песен</param>
         <param name="План" order="4" unit="Этап 4">Свободная игра, импровизация и подбор на слух</param>
-        <param name="Формат обучения">С преподавателем</param>
-        <param name="Формат">Онлайн</param>
-        <param name="Сложность">Для новичков</param>
-        <param name="Тип обучения">Курс</param>
-        <param name="Часы в неделю">2</param>
+        <param name="Формат обучения" unit="формат">С преподавателем</param>
+        <param name="Формат" unit="формат занятий">Онлайн</param>
+        <param name="Сложность" unit="уровень">Для новичков</param>
+        <param name="Тип обучения" unit="тип">Курс</param>
+        <param name="Часы в неделю" unit="час">2</param>
       </offer>
 
     </offers>

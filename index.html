@@ -57,7 +57,7 @@
   .brand svg{width:92px; height:auto; display:block;}
   .brand span{font-family:'Fraunces', serif; font-weight:600; font-size:15.5px; color:var(--cream); line-height:1.2;}
   .brand small{display:block; font-family:'IBM Plex Mono', monospace; font-size:10.5px; font-weight:400; color:var(--orange-soft); letter-spacing:0.06em;}
-  .nav-links{display:flex; align-items:center; gap:18px;}
+  .nav-links{display:flex; align-items:center; gap:14px;}
   .nav-links a{
     font-size:14px; font-weight:600; color:rgba(255,249,245,0.75); text-decoration:none;
   }
@@ -71,7 +71,7 @@
     padding:9px 13px; background:transparent; border:1px solid rgba(255,249,245,0.3);
     color:var(--cream); border-radius:2px; font-size:13px; font-weight:600; cursor:pointer;
   }
-  @media (max-width:960px){ .nav-links{display:none;} }
+  @media (max-width:1060px){ .nav-links{display:none;} }
 
   /* ===== HERO ===== */
   .hero{position:relative; background:var(--ink); color:var(--cream); padding:56px 0 84px; overflow:hidden;}
@@ -370,6 +370,7 @@
       <a href="#online" data-i18n="nav_online">Онлайн</a>
       <a href="#pricing" data-i18n="nav_pricing">Цены</a>
       <a href="#teacher" data-i18n="nav_teacher">Преподаватель</a>
+      <a href="#reviews" data-i18n="nav_reviews">Отзывы</a>
       <a href="#faq" data-i18n="nav_faq">FAQ</a>
       <a href="#contacts" data-i18n="nav_contacts">Контакты</a>
     </div>
@@ -605,6 +606,18 @@
   </div>
 </section>
 
+<section id="reviews">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow"><span class="dot"></span><span data-i18n="reviews_eyebrow">Отзывы</span></div>
+      <h2 data-i18n="reviews_h2">Что говорят ученики</h2>
+    </div>
+    <!-- Elfsight Google Reviews | Untitled Google Reviews -->
+    <script src="https://elfsightcdn.com/platform.js" async></script>
+    <div class="elfsight-app-5912e756-403e-451b-940b-da5c683b2737" data-elfsight-app-lazy></div>
+  </div>
+</section>
+
 <section id="faq" style="background:var(--cream-2);">
   <div class="wrap">
     <div class="section-head">
@@ -732,6 +745,8 @@
     teacher_p2: {en: "Whether in person or online, the main thing in every lesson is learning to play music that inspires you, and enjoying every lesson along the way."},
     gallery_eyebrow: {en: "Atmosphere"},
     gallery_h2: {en: "What lessons and performances look like"},
+    reviews_eyebrow: {en: "Reviews"},
+    reviews_h2: {en: "What students say"},
     faq_eyebrow: {en: "FAQ"},
     faq_h2: {en: "Frequently asked questions"},
     faq1_q: {en: "Is there a price difference between in-person and online?"},
@@ -750,6 +765,7 @@
     nav_online: {en: "Online"},
     nav_pricing: {en: "Pricing"},
     nav_teacher: {en: "Teacher"},
+    nav_reviews: {en: "Reviews"},
     nav_faq: {en: "FAQ"},
     nav_contacts: {en: "Contacts"},
     hero_eyebrow: {en: "📍 BATUMI · INDIVIDUAL LESSONS"},

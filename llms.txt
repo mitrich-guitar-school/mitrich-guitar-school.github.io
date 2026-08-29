@@ -4,11 +4,11 @@
 
 Mitrich Guitar School — школа игры на гитаре под руководством преподавателя Дмитрия Кулешова. Занятия проходят очно в студии в Батуми или онлайн через Google Meet, для учеников из любой точки мира. Первое занятие всегда бесплатное.
 
-## Главное
-- Сайт: https://mitrich-guitar-school.github.io/ — полная информация, цены, FAQ
-- Бесплатное пробное занятие (очно или онлайн)
-- Инструменты: акустическая гитара, электрогитара, укулеле
-- Онлайн-занятия проходят через Google Meet
+## Основное
+- [Главная страница](https://mitrich-guitar-school.github.io/): полная информация о школе, цены, FAQ
+- [Бесплатное пробное занятие](https://mitrich-guitar-school.github.io/#pricing): очно в Батуми или онлайн
+- [Отзывы учеников](https://mitrich-guitar-school.github.io/#reviews): реальные отзывы из Google
+- [Часто задаваемые вопросы](https://mitrich-guitar-school.github.io/#faq): формат занятий, оплата, инструменты
 
 ## Цены
 - Бесплатное пробное занятие
@@ -25,8 +25,10 @@ Mitrich Guitar School — школа игры на гитаре под руко�
 Банковский перевод (Visa, Mastercard, МИР), PayPal, USDT, наличные на очных занятиях.
 
 ## Контакты
-- WhatsApp / Telegram: +995 591 413 065
-- Telegram-канал: https://t.me/guitar_school_batumi
-- Instagram: https://www.instagram.com/mitrich.guitar/
+- [WhatsApp](https://wa.me/995591413065): +995 591 413 065
+- [Telegram-канал](https://t.me/guitar_school_batumi)
+- [Instagram](https://www.instagram.com/mitrich.guitar/): mitrich.guitar
 - Email: mitrich.guitar.school@yandex.ru
-- Сайт: https://mitrich-guitar-school.github.io/
+
+## Optional
+- [YML-фид предложений](https://mitrich-guitar-school.github.io/yandex-offers.xml): для Яндекс.Вебмастера

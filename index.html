@@ -256,7 +256,7 @@
   "description": "Индивидуальные уроки гитары, электрогитары и укулеле в Батуми и онлайн. Обучение с нуля и для продолжающих, для взрослых и детей.",
   "email": "mitrich.guitar.school@yandex.ru",
   "telephone": "+995591413065",
-  "priceRange": "$17-$125",
+  "priceRange": "45₾-330₾",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "улица Хасана Хелимиши, 36",
@@ -291,25 +291,25 @@
       "@type": "Offer",
       "name": "Бесплатное пробное занятие",
       "price": "0",
-      "priceCurrency": "USD"
+      "priceCurrency": "GEL"
     },
     {
       "@type": "Offer",
       "name": "Разовое занятие",
-      "price": "17",
-      "priceCurrency": "USD"
+      "price": "45",
+      "priceCurrency": "GEL"
     },
     {
       "@type": "Offer",
       "name": "Абонемент на 4 занятия",
-      "price": "65",
-      "priceCurrency": "USD"
+      "price": "170",
+      "priceCurrency": "GEL"
     },
     {
       "@type": "Offer",
       "name": "Абонемент на 8 занятий",
-      "price": "125",
-      "priceCurrency": "USD"
+      "price": "330",
+      "priceCurrency": "GEL"
     }
   ]
 }
@@ -542,19 +542,19 @@
       <div class="currency-switch">
         <label for="currency-select" data-i18n="currency_label">Валюта:</label>
         <select id="currency-select">
+          <option value="GEL" selected>₾ GEL</option>
           <option value="USD">$ USD</option>
-          <option value="GEL">₾ GEL</option>
           <option value="RUB">₽ RUB</option>
           <option value="EUR">€ EUR</option>
         </select>
       </div>
-      <div class="rate-note" data-i18n="rate_note">Курс обновляется автоматически, цены округляются в большую сторону</div>
+      <div class="rate-note" data-i18n="rate_note">Цены в лари, курс в другие валюты обновляется автоматически и округляется в большую сторону</div>
     </div>
     <div class="pricing-grid">
       <div class="price-card">
         <div class="price-tag" data-i18n="card1_tag">Разовое занятие</div>
         <h3 data-i18n="card1_h3">Без абонемента</h3>
-        <div class="price-amount"><span class="price-value" data-usd="17">$17</span></div>
+        <div class="price-amount"><span class="price-value" data-gel="45">45 ₾</span></div>
         <div class="price-note" data-i18n="card1_note">за одно занятие 45–60 минут</div>
         <ul class="price-list">
           <li data-i18n="card1_li1">Гибко, без обязательств</li>
@@ -566,10 +566,10 @@
       <div class="price-card featured">
         <div class="price-tag" data-i18n="card2_tag">Популярный выбор</div>
         <h3 data-i18n="card2_h3">Абонемент 4 занятия</h3>
-        <div class="price-amount"><span class="price-value" data-usd="65">$65</span><span data-i18n="per_month">/мес</span></div>
+        <div class="price-amount"><span class="price-value" data-gel="170">170 ₾</span><span data-i18n="per_month">/мес</span></div>
         <div class="price-note" data-i18n="card2_note">1 занятие в неделю</div>
         <ul class="price-list">
-          <li><span class="price-value-inline" data-usd="16">$16</span> <span data-i18n="card2_li1_mid">за занятие вместо</span> <span class="price-value-inline" data-usd="17">$17</span></li>
+          <li><span class="price-value-inline" data-gel="42.5">42.5 ₾</span> <span data-i18n="card2_li1_mid">за занятие вместо</span> <span class="price-value-inline" data-gel="45">45 ₾</span></li>
           <li data-i18n="card2_li2">Фиксированное время в расписании</li>
           <li data-i18n="card2_li3">Подходит для стабильного темпа</li>
         </ul>
@@ -578,10 +578,10 @@
       <div class="price-card">
         <div class="price-tag" data-i18n="card3_tag">Максимум прогресса</div>
         <h3 data-i18n="card3_h3">Абонемент 8 занятий</h3>
-        <div class="price-amount"><span class="price-value" data-usd="125">$125</span><span data-i18n="per_month2">/мес</span></div>
+        <div class="price-amount"><span class="price-value" data-gel="330">330 ₾</span><span data-i18n="per_month2">/мес</span></div>
         <div class="price-note" data-i18n="card3_note">2 занятия в неделю</div>
         <ul class="price-list">
-          <li><span class="price-value-inline" data-usd="15.6">$15.6</span> <span data-i18n="card3_li1_suffix">за занятие</span></li>
+          <li><span class="price-value-inline" data-gel="41.25">41.25 ₾</span> <span data-i18n="card3_li1_suffix">за занятие</span></li>
           <li data-i18n="card3_li2">Быстрее прогресс за счёт частоты</li>
           <li data-i18n="card3_li3">Запись каждого онлайн-урока</li>
         </ul>
@@ -754,7 +754,7 @@
     card3_li2: {en: "Faster progress from frequency"},
     card3_li3: {en: "Every online lesson recorded"},
     currency_label: {en: "Currency:"},
-    rate_note: {en: "Rate updates automatically, prices round up"},
+    rate_note: {en: "Prices are in GEL, other currencies update automatically and round up"},
     card2_li1_mid: {en: "per lesson instead of"},
     card3_li1_suffix: {en: "per lesson"},
     card_cta_subscribe2: {en: "Subscribe"},
@@ -824,17 +824,15 @@
 })();
 
 (function(){
-  var fallbackRates = { USD: 1, GEL: 2.65, RUB: 84, EUR: 0.86 };
+  var fallbackRates = { GEL: 1, USD: 0.3843, EUR: 0.3317, RUB: 33.05 };
   var rates = fallbackRates;
   var symbols = { USD: '$', GEL: '₾', RUB: '₽', EUR: '€' };
   var prefixCurrencies = { USD: true, EUR: true };
 
-  function formatPrice(usd, currency){
-    var value = usd;
-    if (currency !== 'USD'){
-      value = Math.ceil(usd * rates[currency]);
-    } else if (Number.isInteger(usd) === false && usd % 1 !== 0){
-      value = usd;
+  function formatPrice(gel, currency){
+    var value = gel;
+    if (currency !== 'GEL'){
+      value = Math.ceil(gel * rates[currency]);
     }
     var symbol = symbols[currency];
     if (prefixCurrencies[currency]){
@@ -845,8 +843,8 @@
 
   function applyCurrency(currency){
     document.querySelectorAll('.price-value, .price-value-inline').forEach(function(el){
-      var usd = parseFloat(el.getAttribute('data-usd'));
-      el.textContent = formatPrice(usd, currency);
+      var gel = parseFloat(el.getAttribute('data-gel'));
+      el.textContent = formatPrice(gel, currency);
     });
     try { localStorage.setItem('site-currency', currency); } catch(e){}
   }
@@ -857,20 +855,30 @@
     select.addEventListener('change', function(){ applyCurrency(select.value); });
     applyCurrency(select.value);
 
-    fetch('https://open.er-api.com/v6/latest/USD')
+    var primaryUrl = 'https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/gel.json';
+    var fallbackUrl = 'https://latest.currency-api.pages.dev/v1/currencies/gel.json';
+
+    function applyRates(data){
+      if (data && data.gel){
+        rates = {
+          GEL: 1,
+          USD: data.gel.usd || fallbackRates.USD,
+          RUB: data.gel.rub || fallbackRates.RUB,
+          EUR: data.gel.eur || fallbackRates.EUR
+        };
+        applyCurrency(select.value);
+      }
+    }
+
+    fetch(primaryUrl)
       .then(function(res){ return res.json(); })
-      .then(function(data){
-        if (data && data.rates){
-          rates = {
-            USD: 1,
-            GEL: data.rates.GEL || fallbackRates.GEL,
-            RUB: data.rates.RUB || fallbackRates.RUB,
-            EUR: data.rates.EUR || fallbackRates.EUR
-          };
-          applyCurrency(select.value);
-        }
-      })
-      .catch(function(){ /* keep fallback rates */ });
+      .then(applyRates)
+      .catch(function(){
+        fetch(fallbackUrl)
+          .then(function(res){ return res.json(); })
+          .then(applyRates)
+          .catch(function(){ /* keep fallback rates */ });
+      });
   }
 
   initCurrency();

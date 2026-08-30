@@ -173,6 +173,41 @@
   .step h3{font-size:19px; color:var(--ink); margin-bottom:10px;}
   .step p{color:rgba(24,24,24,0.68); font-size:15px; margin:0;}
 
+  /* ===== SECTION PATTERNS: offline vs online ===== */
+  .section-offline, .section-online{position:relative; overflow:hidden;}
+  .section-offline .section-pattern, .section-online .section-pattern{
+    position:absolute; inset:0; z-index:0; pointer-events:none;
+  }
+  .section-offline .section-pattern{
+    background-image: radial-gradient(circle, rgba(239,120,26,0.09) 1.6px, transparent 1.6px);
+    background-size: 24px 24px;
+  }
+  .section-offline .corner-icon{
+    position:absolute; right:-50px; bottom:-50px; width:300px; height:300px;
+    opacity:0.06; z-index:0; pointer-events:none;
+  }
+  .section-offline .wrap{position:relative; z-index:1;}
+
+  .section-online{background:var(--ink); color:var(--cream);}
+  .section-online .section-pattern{
+    background-image: radial-gradient(circle, rgba(245,160,92,0.10) 1.6px, transparent 1.6px);
+    background-size: 28px 28px;
+  }
+  .section-online .corner-icon{
+    position:absolute; right:-40px; bottom:-40px; width:340px; height:340px;
+    opacity:0.07; z-index:0; pointer-events:none;
+  }
+  .section-online .wrap{position:relative; z-index:1;}
+  .section-online .section-head h2{color:var(--cream);}
+  .section-online .section-head p{color:rgba(255,249,245,0.72);}
+  .section-online .eyebrow{color:var(--orange-soft);}
+  .section-online .eyebrow .dot{background:var(--orange-soft);}
+  .section-online .steps{background:rgba(255,249,245,0.12); border-color:rgba(255,249,245,0.12);}
+  .section-online .step{background:#212121;}
+  .section-online .step .num{color:var(--orange-soft);}
+  .section-online .step h3{color:var(--cream);}
+  .section-online .step p{color:rgba(255,249,245,0.68);}
+
   /* ===== LOCATION ===== */
   .location-card{
     display:grid; grid-template-columns:1fr 1fr; gap:0;
@@ -459,7 +494,12 @@
   </div>
 </section>
 
-<section id="offline">
+<section id="offline" class="section-offline">
+  <div class="section-pattern"></div>
+  <svg class="corner-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+    <path d="M12 22s7-7.58 7-13A7 7 0 0 0 5 9c0 5.42 7 13 7 13Z" stroke="#EF781A" stroke-width="1"/>
+    <circle cx="12" cy="9" r="2.4" fill="#EF781A"/>
+  </svg>
   <div class="wrap">
     <div class="section-head">
       <div class="eyebrow"><span class="dot"></span><span data-i18n="offline_eyebrow">Очные занятия</span></div>
@@ -506,7 +546,13 @@
   </div>
 </section>
 
-<section id="online">
+<section id="online" class="section-online">
+  <div class="section-pattern"></div>
+  <svg class="corner-icon" viewBox="0 0 64 48" fill="none" aria-hidden="true">
+    <rect x="8" y="4" width="48" height="30" rx="2" stroke="#F5A05C" stroke-width="1.4"/>
+    <circle cx="32" cy="9.5" r="1.6" fill="#F5A05C"/>
+    <path d="M4 44 L60 44 L52 34 L12 34 Z" stroke="#F5A05C" stroke-width="1.4" stroke-linejoin="round"/>
+  </svg>
   <div class="wrap">
     <div class="section-head">
       <div class="eyebrow"><span class="dot"></span><span data-i18n="online_eyebrow">Онлайн-формат</span></div>

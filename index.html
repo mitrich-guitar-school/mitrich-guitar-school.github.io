@@ -615,7 +615,7 @@
         <div class="price-amount"><span class="price-value" data-gel="170">170 ₾</span><span data-i18n="per_month">/мес</span></div>
         <div class="price-note" data-i18n="card2_note">1 занятие в неделю</div>
         <ul class="price-list">
-          <li><span class="price-value-inline" data-gel="42.5">42.5 ₾</span> <span data-i18n="card2_li1_mid">за занятие вместо</span> <span class="price-value-inline" data-gel="45">45 ₾</span></li>
+          <li><span class="price-value-inline" data-gel="42.5" data-round="floor">42.5 ₾</span> <span data-i18n="card2_li1_mid">за занятие вместо</span> <span class="price-value-inline" data-gel="45">45 ₾</span></li>
           <li data-i18n="card2_li2">Фиксированное время в расписании</li>
           <li data-i18n="card2_li3">Подходит для стабильного темпа</li>
         </ul>
@@ -627,7 +627,7 @@
         <div class="price-amount"><span class="price-value" data-gel="330">330 ₾</span><span data-i18n="per_month2">/мес</span></div>
         <div class="price-note" data-i18n="card3_note">2 занятия в неделю</div>
         <ul class="price-list">
-          <li><span class="price-value-inline" data-gel="41.25">41.25 ₾</span> <span data-i18n="card3_li1_suffix">за занятие</span></li>
+          <li><span class="price-value-inline" data-gel="41.25" data-round="floor">41.25 ₾</span> <span data-i18n="card3_li1_suffix">за занятие</span></li>
           <li data-i18n="card3_li2">Быстрее прогресс за счёт частоты</li>
           <li data-i18n="card3_li3">Запись каждого онлайн-урока</li>
         </ul>
@@ -875,10 +875,10 @@
   var symbols = { USD: '$', GEL: '₾', RUB: '₽', EUR: '€' };
   var prefixCurrencies = { USD: true, EUR: true };
 
-  function formatPrice(gel, currency){
+  function formatPrice(gel, currency, roundDown){
     var value = gel;
     if (currency !== 'GEL'){
-      value = Math.ceil(gel * rates[currency]);
+      value = roundDown ? Math.floor(gel * rates[currency]) : Math.ceil(gel * rates[currency]);
     }
     var symbol = symbols[currency];
     if (prefixCurrencies[currency]){
@@ -890,7 +890,8 @@
   function applyCurrency(currency){
     document.querySelectorAll('.price-value, .price-value-inline').forEach(function(el){
       var gel = parseFloat(el.getAttribute('data-gel'));
-      el.textContent = formatPrice(gel, currency);
+      var roundDown = el.getAttribute('data-round') === 'floor';
+      el.textContent = formatPrice(gel, currency, roundDown);
     });
     try { localStorage.setItem('site-currency', currency); } catch(e){}
   }

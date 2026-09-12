@@ -902,8 +902,20 @@
     select.addEventListener('change', function(){ applyCurrency(select.value); });
     applyCurrency(select.value);
 
-    var primaryUrl = 'https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/gel.json';
-    var fallbackUrl = 'https://latest.currency-api.pages.dev/v1/currencies/gel.json';
+    var cacheBust = '?t=' + Date.now();
+    var primaryUrl = 'https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/gel.min.json' + cacheBust;
+    var fallbackUrl = 'https://latest.currency-api.pages.dev/v1/currencies/gel.min.json' + cacheBust;
+    var fetchOpts = { cache: 'no-store' };
+
+    function markUpdated(dateStr){
+      var note = document.querySelector('.rate-note');
+      if (note){
+        var stamp = dateStr ? (' · курс на ' + dateStr) : ' · курс не обновился, показаны примерные значения';
+        note.setAttribute('data-rate-stamp', stamp);
+        var base = note.getAttribute('data-i18n') ? note.textContent.split(' · ')[0] : note.textContent;
+        note.textContent = base + stamp;
+      }
+    }
 
     function applyRates(data){
       if (data && data.gel){
@@ -914,17 +926,18 @@
           EUR: data.gel.eur || fallbackRates.EUR
         };
         applyCurrency(select.value);
+        markUpdated(data.date || null);
       }
     }
 
-    fetch(primaryUrl)
+    fetch(primaryUrl, fetchOpts)
       .then(function(res){ return res.json(); })
       .then(applyRates)
       .catch(function(){
-        fetch(fallbackUrl)
+        fetch(fallbackUrl, fetchOpts)
           .then(function(res){ return res.json(); })
           .then(applyRates)
-          .catch(function(){ /* keep fallback rates */ });
+          .catch(function(){ markUpdated(null); });
       });
   }
 

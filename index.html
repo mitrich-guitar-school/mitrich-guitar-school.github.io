@@ -73,7 +73,7 @@
     padding:9px 13px; background:transparent; border:1px solid rgba(255,249,245,0.3);
     color:var(--cream); border-radius:2px; font-size:13px; font-weight:600; cursor:pointer;
   }
-  @media (max-width:1060px){ .nav-links{display:none;} }
+  @media (max-width:1180px){ .nav-links{display:none;} }
 
   /* ===== HERO ===== */
   .hero{position:relative; background:var(--ink); color:var(--cream); padding:56px 0 84px; overflow:hidden;}
@@ -279,6 +279,51 @@
     .teacher{grid-template-columns:1fr; padding:28px;}
     .teacher-avatar{width:96px; height:96px;}
   }
+
+  /* ===== HEADER SOCIAL ===== */
+  .site-nav .wrap{max-width:1240px;}
+  .nav-social{display:flex; align-items:center; gap:6px;}
+  .nav-social a{
+    width:34px; height:34px; border:1px solid rgba(255,249,245,0.22); border-radius:50%;
+    display:flex; align-items:center; justify-content:center; color:var(--cream);
+    transition:background .15s ease, border-color .15s ease, color .15s ease;
+  }
+  .nav-social a:hover{background:var(--orange); border-color:var(--orange); color:var(--ink);}
+  .nav-social svg{width:17px; height:17px;}
+  @media (max-width:600px){ .nav-social{display:none;} }
+
+  /* ===== VIDEO ===== */
+  .video-row{display:grid; grid-template-columns:repeat(4,1fr); gap:16px; align-items:start;}
+  .video-item{margin:0;}
+  .video-card{position:relative; border-radius:6px; overflow:hidden; background:var(--ink); aspect-ratio:9/16;}
+  .video-card.ig-loaded{aspect-ratio:9/20;}
+  .video-card video, .video-card iframe{width:100%; height:100%; display:block; border:0; object-fit:cover; background:var(--ink);}
+  .video-facade{position:absolute; inset:0; width:100%; height:100%; border:0; padding:0; margin:0; cursor:pointer; background:var(--ink); color:var(--cream); font:inherit; overflow:hidden;}
+  .video-facade img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block;}
+  .video-facade::after{content:""; position:absolute; inset:0; background:linear-gradient(to top, rgba(24,24,24,0.45), rgba(24,24,24,0) 55%);}
+  .video-facade .play{
+    position:absolute; left:50%; top:50%; width:58px; height:58px; margin:-29px 0 0 -29px; z-index:2;
+    border-radius:50%; background:var(--orange); display:flex; align-items:center; justify-content:center;
+    box-shadow:0 8px 24px rgba(0,0,0,0.35); transition:transform .15s ease;
+  }
+  .video-facade:hover .play{transform:scale(1.07);}
+  .video-facade .play svg{width:22px; height:22px; fill:var(--cream); margin-left:3px;}
+  .video-facade.ig{background:linear-gradient(160deg,#2b2b2b 0%,#181818 55%,#3a2210 100%);}
+  .video-facade .ig-label{position:absolute; left:16px; right:16px; bottom:18px; z-index:2; text-align:left; font-size:13.5px; line-height:1.4; color:rgba(255,249,245,0.78);}
+  .video-facade .ig-label strong{display:block; font-family:'Fraunces', serif; font-size:16px; font-weight:600; color:var(--cream); margin-bottom:2px;}
+  .video-item figcaption{margin-top:10px; font-size:14px; color:rgba(24,24,24,0.7);}
+  .video-item figcaption a{text-decoration:underline; font-weight:600;}
+  @media (max-width:900px){
+    .video-row{display:flex; overflow-x:auto; scroll-snap-type:x mandatory; padding-bottom:12px; -webkit-overflow-scrolling:touch;}
+    .video-item{flex:0 0 min(250px,70vw); scroll-snap-align:start;}
+  }
+
+  /* ===== GOOGLE FORM ===== */
+  .form-embed{max-width:680px; margin:0 auto; border:1px solid var(--line); border-radius:6px; overflow:hidden; background:#fff;}
+  .form-embed iframe{display:block; width:100%; height:820px; border:0;}
+  .form-open{max-width:680px; margin:14px auto 0; text-align:center; font-size:14px;}
+  .form-open a{text-decoration:underline; font-weight:600; color:var(--orange);}
+  @media (max-width:600px){ .form-embed iframe{height:900px;} }
 </style>
 <script type="application/ld+json">
 {
@@ -397,6 +442,18 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "Знакомство с преподавателем Mitrich Guitar School",
+  "description": "Короткое видеообращение преподавателя: как проходят уроки гитары в Mitrich Guitar School в Батуми и онлайн.",
+  "thumbnailUrl": "https://mitrich-guitar-school.github.io/images/teacher-intro-poster.jpg",
+  "contentUrl": "https://mitrich-guitar-school.github.io/video/teacher-intro.mp4",
+  "uploadDate": "2026-10-24",
+  "duration": "PT58S"
+}
+</script>
 </head>
 <body>
 
@@ -431,6 +488,17 @@
       <a href="#contacts" data-i18n="nav_contacts">Контакты</a>
     </div>
     <div class="nav-right">
+      <div class="nav-social">
+        <a href="https://wa.me/995591413065" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.2 20.8l1.4-4.4A8.6 8.6 0 1 1 7.9 19.6l-4.7 1.2z"/><path d="M9.2 8.2c-.4 1.9 1.6 5 4.4 6.2 1 .4 1.9.2 2.4-.6l-1.8-1.2-.9.7c-1-.4-2-1.4-2.4-2.4l.7-.9-1.1-1.9c-.5.1-1.1.8-1.3 2.1z"/></svg>
+        </a>
+        <a href="https://t.me/guitar_school_batumi" target="_blank" rel="noopener" aria-label="Telegram" title="Telegram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 3L3 10.5l6.2 2.3 2.3 7.2 3.2-4.2 4.8 4.2L21 3z"/><path d="M9.2 12.8L21 3"/></svg>
+        </a>
+        <a href="https://www.instagram.com/mitrich.guitar/" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.1" cy="6.9" r="0.9" fill="currentColor" stroke="none"/></svg>
+        </a>
+      </div>
       <a class="nav-cta" href="https://wa.me/995591413065" target="_blank" data-i18n="hero_cta_primary">Записаться</a>
       <button id="lang-toggle">EN</button>
     </div>
@@ -459,7 +527,7 @@
         <a class="format-link" href="#online"><span class="tag" data-i18n="tag_online">Онлайн</span> <span data-i18n="format_online_label">Занятия по видеосвязи</span></a>
       </div>
 
-      <p class="alt-contact" style="color:rgba(255,249,245,0.65);"><span data-i18n="alt_no_whatsapp">Нет WhatsApp? Пишите в</span> <a href="https://t.me/guitar_school_batumi" target="_blank" style="color:var(--orange-soft);">Telegram</a> <span data-i18n="alt_or">или</span> <a href="https://www.instagram.com/mitrich.guitar/" target="_blank" style="color:var(--orange-soft);">Instagram</a></p>
+      <p class="alt-contact" style="color:rgba(255,249,245,0.65);"><span data-i18n="alt_no_whatsapp">Нет WhatsApp? Пишите в</span> <a href="https://t.me/guitar_school_batumi" target="_blank" style="color:var(--orange-soft);">Telegram</a> <span data-i18n="alt_or">или</span> <a href="https://www.instagram.com/mitrich.guitar/" target="_blank" style="color:var(--orange-soft);">Instagram</a><span data-i18n="alt_form_pre">, либо </span><a href="#request" style="color:var(--orange-soft);" data-i18n="alt_form_link">оставьте заявку в форме</a></p>
     </div>
 
     <div class="hero-photo">
@@ -515,7 +583,7 @@
       <div class="step">
         <div class="num mono">02</div>
         <h3 data-i18n="off_step2_h3">Регулярные занятия</h3>
-        <p data-i18n="off_step2_p">1–3 раза в неделю в студии в Батуми, в удобное для вас время.</p>
+        <p data-i18n="off_step2_p">1-3 раза в неделю в студии в Батуми, в удобное для вас время.</p>
       </div>
       <div class="step">
         <div class="num mono">03</div>
@@ -568,7 +636,7 @@
       <div class="step">
         <div class="num mono">02</div>
         <h3 data-i18n="on_step2_h3">Регулярные занятия</h3>
-        <p data-i18n="on_step2_p">1–3 раза в неделю, в удобное время по вашему часовому поясу. Урок записывается, можно пересматривать его между занятиями.</p>
+        <p data-i18n="on_step2_p">1-3 раза в неделю, в удобное время по вашему часовому поясу. Урок записывается, можно пересматривать его между занятиями.</p>
       </div>
       <div class="step">
         <div class="num mono">03</div>
@@ -601,7 +669,7 @@
         <div class="price-tag" data-i18n="card1_tag">Разовое занятие</div>
         <h3 data-i18n="card1_h3">Без абонемента</h3>
         <div class="price-amount"><span class="price-value" data-gel="45">45 ₾</span></div>
-        <div class="price-note" data-i18n="card1_note">за одно занятие 45–60 минут</div>
+        <div class="price-note" data-i18n="card1_note">за одно занятие 45-60 минут</div>
         <ul class="price-list">
           <li data-i18n="card1_li1">Гибко, без обязательств</li>
           <li data-i18n="card1_li2">Подходит, чтобы попробовать формат</li>
@@ -613,7 +681,7 @@
         <div class="price-tag" data-i18n="card2_tag">Популярный выбор</div>
         <h3 data-i18n="card2_h3">Абонемент 4 занятия</h3>
         <div class="price-amount"><span class="price-value" data-gel="170">170 ₾</span><span data-i18n="per_month">/мес</span></div>
-        <div class="price-note" data-i18n="card2_note">1 занятие в неделю</div>
+        <div class="price-note" data-i18n="card2_note">1 занятие в неделю, по 45-60 минут</div>
         <ul class="price-list">
           <li><span class="price-value-inline" data-derive-total="170" data-derive-count="4">42.5 ₾</span> <span data-i18n="card2_li1_mid">за занятие вместо</span> <span class="price-value-inline" data-gel="45">45 ₾</span></li>
           <li data-i18n="card2_li2">Фиксированное время в расписании</li>
@@ -625,7 +693,7 @@
         <div class="price-tag" data-i18n="card3_tag">Максимум прогресса</div>
         <h3 data-i18n="card3_h3">Абонемент 8 занятий</h3>
         <div class="price-amount"><span class="price-value" data-gel="330">330 ₾</span><span data-i18n="per_month2">/мес</span></div>
-        <div class="price-note" data-i18n="card3_note">2 занятия в неделю</div>
+        <div class="price-note" data-i18n="card3_note">2 занятия в неделю, по 45-60 минут</div>
         <ul class="price-list">
           <li><span class="price-value-inline" data-derive-total="330" data-derive-count="8">41.25 ₾</span> <span data-i18n="card3_li1_suffix">за занятие</span></li>
           <li data-i18n="card3_li2">Быстрее прогресс за счёт частоты</li>
@@ -634,7 +702,7 @@
         <a class="price-cta" href="https://wa.me/995591413065" target="_blank" data-i18n="card_cta_subscribe2">Оформить абонемент</a>
       </div>
     </div>
-    <p class="alt-contact" style="text-align:center; color:rgba(24,24,24,0.6);"><span data-i18n="alt_no_whatsapp2">Нет WhatsApp? Пишите в</span> <a href="https://t.me/guitar_school_batumi" target="_blank" style="color:var(--orange);">Telegram</a> <span data-i18n="alt_or2">или</span> <a href="https://www.instagram.com/mitrich.guitar/" target="_blank" style="color:var(--orange);">Instagram</a></p>
+    <p class="alt-contact" style="text-align:center; color:rgba(24,24,24,0.6);"><span data-i18n="alt_no_whatsapp2">Нет WhatsApp? Пишите в</span> <a href="https://t.me/guitar_school_batumi" target="_blank" style="color:var(--orange);">Telegram</a> <span data-i18n="alt_or2">или</span> <a href="https://www.instagram.com/mitrich.guitar/" target="_blank" style="color:var(--orange);">Instagram</a><span data-i18n="alt_form_pre">, либо </span><a href="#request" style="color:var(--orange);" data-i18n="alt_form_link">оставьте заявку в форме</a></p>
   </div>
 </section>
 
@@ -652,6 +720,53 @@
         <p data-i18n="teacher_p1">Пришёл к музыке не через музыкальную школу, а через любовь к гитаре и желание играть. За плечами годы практики, выступления с группой и работа над собственными песнями.</p>
         <p data-i18n="teacher_p2">И очно, и онлайн на занятиях главное: научиться играть музыку, которая вдохновляет именно вас, и получать удовольствие от каждого урока.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<section id="video" class="video-section" style="background:var(--cream-2);">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow"><span class="dot"></span><span data-i18n="video_eyebrow">Видео</span></div>
+      <h2 data-i18n="video_h2">Познакомьтесь до первого занятия</h2>
+      <p data-i18n="video_p">Короткие ролики о том, как проходят занятия и как мы работаем с учениками.</p>
+    </div>
+    <div class="video-row">
+      <figure class="video-item">
+        <div class="video-card">
+          <video controls preload="none" playsinline poster="images/teacher-intro-poster.jpg" aria-label="Знакомство с преподавателем Mitrich Guitar School">
+            <source src="video/teacher-intro.mp4" type="video/mp4">
+          </video>
+        </div>
+        <figcaption data-i18n="video_cap_own">Знакомство с преподавателем</figcaption>
+      </figure>
+      <figure class="video-item">
+        <div class="video-card">
+          <button class="video-facade" type="button" data-kind="yt" data-embed="https://www.youtube-nocookie.com/embed/DVFsJOD__gU?autoplay=1&rel=0&playsinline=1" data-title="Видео на YouTube" aria-label="Смотреть видео на YouTube">
+            <img src="https://i.ytimg.com/vi/DVFsJOD__gU/hqdefault.jpg" alt="" loading="lazy" decoding="async">
+            <span class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l13-7.5z"/></svg></span>
+          </button>
+        </div>
+        <figcaption><a href="https://www.youtube.com/shorts/DVFsJOD__gU" target="_blank" rel="noopener" data-i18n="video_open_yt">Смотреть на YouTube</a></figcaption>
+      </figure>
+      <figure class="video-item">
+        <div class="video-card">
+          <button class="video-facade ig" type="button" data-kind="ig" data-embed="https://www.instagram.com/p/Daxh8PzoqMw/embed" data-title="Видео из Instagram" aria-label="Загрузить видео из Instagram">
+            <span class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l13-7.5z"/></svg></span>
+            <span class="ig-label"><strong data-i18n="video_ig_title">Видео из Instagram</strong><span data-i18n="video_ig_hint">Нажмите, чтобы загрузить</span></span>
+          </button>
+        </div>
+        <figcaption><a href="https://www.instagram.com/p/Daxh8PzoqMw/" target="_blank" rel="noopener" data-i18n="video_open_ig">Смотреть в Instagram</a></figcaption>
+      </figure>
+      <figure class="video-item">
+        <div class="video-card">
+          <button class="video-facade ig" type="button" data-kind="ig" data-embed="https://www.instagram.com/p/DaaPpiIo6oQ/embed" data-title="Видео из Instagram" aria-label="Загрузить видео из Instagram">
+            <span class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l13-7.5z"/></svg></span>
+            <span class="ig-label"><strong data-i18n="video_ig_title">Видео из Instagram</strong><span data-i18n="video_ig_hint">Нажмите, чтобы загрузить</span></span>
+          </button>
+        </div>
+        <figcaption><a href="https://www.instagram.com/p/DaaPpiIo6oQ/" target="_blank" rel="noopener" data-i18n="video_open_ig">Смотреть в Instagram</a></figcaption>
+      </figure>
     </div>
   </div>
 </section>
@@ -720,6 +835,20 @@
   </div>
 </section>
 
+<section id="request">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow"><span class="dot"></span><span data-i18n="request_eyebrow">Заявка</span></div>
+      <h2 data-i18n="request_h2">Не хотите писать в мессенджер? Оставьте заявку</h2>
+      <p data-i18n="request_p">Заполните короткую форму, и мы свяжемся удобным для вас способом.</p>
+    </div>
+    <div class="form-embed">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScqo1CPdj3h5plRsQWXXY08c52JlDad38cn6QZIpnLBt8Ag1g/viewform?embedded=true" title="Запись на бесплатный пробный урок" loading="lazy" frameborder="0" marginheight="0" marginwidth="0">Загрузка…</iframe>
+    </div>
+    <p class="form-open"><a href="https://docs.google.com/forms/d/e/1FAIpQLScqo1CPdj3h5plRsQWXXY08c52JlDad38cn6QZIpnLBt8Ag1g/viewform" target="_blank" rel="noopener" data-i18n="request_open">Открыть форму в новом окне</a></p>
+  </div>
+</section>
+
 <section id="contacts" class="footer-cta">
   <div class="wrap">
     <h2 data-i18n="footer_h2">Первое занятие бесплатно.<br>Очно или онлайн, решаете вы.</h2>
@@ -729,6 +858,7 @@
       <a class="btn btn-ghost" href="https://t.me/guitar_school_batumi" target="_blank">Telegram</a>
       <a class="btn btn-ghost" href="https://www.instagram.com/mitrich.guitar/" target="_blank">Instagram</a>
       <a class="btn btn-ghost" href="tel:+995591413065">+995 591 413 065</a>
+      <a class="btn btn-ghost" href="#request" data-i18n="footer_form_btn">Оставить заявку</a>
     </div>
   </div>
 </section>
@@ -759,7 +889,7 @@
     off_step1_h3: {en: "Free trial lesson"},
     off_step1_p: {en: "Come to the studio with or without an instrument, we get to know each other and set a goal for your lessons."},
     off_step2_h3: {en: "Regular lessons"},
-    off_step2_p: {en: "1–3 times a week at the studio in Batumi, at a time that works for you."},
+    off_step2_p: {en: "1-3 times a week at the studio in Batumi, at a time that works for you."},
     off_step3_h3: {en: "You play your own songs"},
     off_step3_p: {en: "Confident chords, your first fully played song, and from there, your own repertoire and improvisation."},
     location_eyebrow: {en: "Location"},
@@ -773,7 +903,7 @@
     on_step1_h3: {en: "Free trial lesson"},
     on_step1_p: {en: "30 minutes on Google Meet: we get to know each other, check your level and guitar, and set a goal for your lessons."},
     on_step2_h3: {en: "Regular lessons"},
-    on_step2_p: {en: "1–3 times a week, at a time that works for your timezone. The lesson is recorded, you can rewatch it between sessions."},
+    on_step2_p: {en: "1-3 times a week, at a time that works for your timezone. The lesson is recorded, you can rewatch it between sessions."},
     on_step3_h3: {en: "You play your own songs"},
     on_step3_p: {en: "Within a few weeks: confident chords and your first fully played song. After that, improvisation, solos, your own repertoire."},
     pricing_eyebrow: {en: "One price"},
@@ -781,7 +911,7 @@
     pricing_p: {en: "Start with a free trial lesson, in person or online. Prices are the same for acoustic guitar, electric guitar, and ukulele."},
     card1_tag: {en: "Single lesson"},
     card1_h3: {en: "No subscription"},
-    card1_note: {en: "per one 45–60 minute lesson"},
+    card1_note: {en: "per one 45-60 minute lesson"},
     card1_li1: {en: "Flexible, no commitment"},
     card1_li2: {en: "Good for trying the format"},
     card1_li3: {en: "Pay before the lesson"},
@@ -789,14 +919,14 @@
     card2_tag: {en: "Most popular"},
     card2_h3: {en: "4-lesson subscription"},
     per_month: {en: "/mo"},
-    card2_note: {en: "1 lesson a week"},
+    card2_note: {en: "1 lesson a week, 45-60 minutes each"},
     card2_li2: {en: "Fixed time in the schedule"},
     card2_li3: {en: "Good for a steady pace"},
     card_cta_subscribe: {en: "Subscribe"},
     card3_tag: {en: "Maximum progress"},
     card3_h3: {en: "8-lesson subscription"},
     per_month2: {en: "/mo"},
-    card3_note: {en: "2 lessons a week"},
+    card3_note: {en: "2 lessons a week, 45-60 minutes each"},
     card3_li2: {en: "Faster progress from frequency"},
     card3_li3: {en: "Every online lesson recorded"},
     currency_label: {en: "Currency:"},
@@ -835,6 +965,21 @@
     nav_reviews: {en: "Reviews"},
     nav_faq: {en: "FAQ"},
     nav_contacts: {en: "Contacts"},
+    video_eyebrow: {en: "Video"},
+    video_h2: {en: "Get to know us before your first lesson"},
+    video_p: {en: "Short clips about how lessons go and how we work with students."},
+    video_cap_own: {en: "Meet the teacher"},
+    video_open_yt: {en: "Watch on YouTube"},
+    video_open_ig: {en: "Watch on Instagram"},
+    video_ig_title: {en: "Instagram video"},
+    video_ig_hint: {en: "Tap to load"},
+    request_eyebrow: {en: "Request"},
+    request_h2: {en: "Prefer not to use messengers? Leave a request"},
+    request_p: {en: "Fill in a short form and we will get back to you the way you prefer."},
+    request_open: {en: "Open the form in a new window"},
+    footer_form_btn: {en: "Leave a request"},
+    alt_form_pre: {en: ", or "},
+    alt_form_link: {en: "leave a request in the form"},
     hero_eyebrow: {en: "📍 BATUMI · INDIVIDUAL LESSONS"},
     location_addr: {en: "36 Khasan Khelimishi street"},
     footer_h2: {en: "First lesson is free.<br>In person or online, it's up to you."},
@@ -959,6 +1104,24 @@
   }
 
   initCurrency();
+})();
+</script>
+<script>
+(function(){
+  document.querySelectorAll('.video-facade').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var card = btn.closest('.video-card');
+      var frame = document.createElement('iframe');
+      frame.src = btn.getAttribute('data-embed');
+      frame.title = btn.getAttribute('data-title') || 'Video';
+      frame.setAttribute('allow', 'autoplay; encrypted-media; picture-in-picture; fullscreen');
+      frame.setAttribute('allowfullscreen', '');
+      frame.setAttribute('frameborder', '0');
+      if (btn.getAttribute('data-kind') === 'ig') { card.classList.add('ig-loaded'); }
+      card.innerHTML = '';
+      card.appendChild(frame);
+    });
+  });
 })();
 </script>
 

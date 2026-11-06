@@ -442,18 +442,6 @@
   ]
 }
 </script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "VideoObject",
-  "name": "Знакомство с преподавателем Mitrich Guitar School",
-  "description": "Короткое видеообращение преподавателя: как проходят уроки гитары в Mitrich Guitar School в Батуми и онлайн.",
-  "thumbnailUrl": "https://mitrich-guitar-school.github.io/images/teacher-intro-poster.jpg",
-  "contentUrl": "https://mitrich-guitar-school.github.io/video/teacher-intro.mp4",
-  "uploadDate": "2026-10-24T12:00:00+04:00",
-  "duration": "PT58S"
-}
-</script>
 </head>
 <body>
 
@@ -734,9 +722,10 @@
     <div class="video-row">
       <figure class="video-item">
         <div class="video-card">
-          <video controls preload="none" playsinline poster="images/teacher-intro-poster.jpg" aria-label="Знакомство с преподавателем Mitrich Guitar School">
-            <source src="video/teacher-intro.mp4" type="video/mp4">
-          </video>
+          <button class="video-facade" type="button" data-kind="own" data-src="video/teacher-intro.mp4" data-poster="images/teacher-intro-poster.jpg" data-title="Знакомство с преподавателем Mitrich Guitar School" aria-label="Смотреть видео: знакомство с преподавателем">
+            <img src="images/teacher-intro-poster.jpg" alt="" loading="lazy" decoding="async">
+            <span class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l13-7.5z"/></svg></span>
+          </button>
         </div>
         <figcaption data-i18n="video_cap_own">Знакомство с преподавателем</figcaption>
       </figure>
@@ -1111,6 +1100,23 @@
   document.querySelectorAll('.video-facade').forEach(function(btn){
     btn.addEventListener('click', function(){
       var card = btn.closest('.video-card');
+      if (btn.getAttribute('data-kind') === 'own') {
+        var v = document.createElement('video');
+        v.controls = true;
+        v.autoplay = true;
+        v.setAttribute('playsinline', '');
+        v.setAttribute('poster', btn.getAttribute('data-poster'));
+        v.setAttribute('aria-label', btn.getAttribute('data-title'));
+        var s = document.createElement('source');
+        s.src = btn.getAttribute('data-src');
+        s.type = 'video/mp4';
+        v.appendChild(s);
+        card.innerHTML = '';
+        card.appendChild(v);
+        var p = v.play();
+        if (p && p.catch) { p.catch(function(){}); }
+        return;
+      }
       var frame = document.createElement('iframe');
       frame.src = btn.getAttribute('data-embed');
       frame.title = btn.getAttribute('data-title') || 'Video';
